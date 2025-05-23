@@ -13,21 +13,27 @@
             min-height: 100vh;
             margin: 0;
             padding: 0;
+            position: relative;
+        }
+
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+            max-width: 1200px;
+            padding: 1rem;
+        }
+
+        .banner {
             background-image: url("/Festival_Drone_header.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             background-position: top center;
-        }
-
-        .banner {
-            min-height: 100vh;
-            text-align: center;
-            height: 100%;
             width: calc(100% - 1rem);
             display: flex;
             flex-direction: row;
-            align-items: stretch;
-            justify-content: center;
+            align-items: start;
+            justify-content: start;
             padding: 0 0.5rem;
         }
 
@@ -37,6 +43,22 @@
             gap: 3rem;
             justify-content: center;
             align-items: center;
+        }
+        @media (min-width: 1000px) {
+            .banner-content {
+                height: 400px;
+                display: flex;
+                flex-direction: row;
+                gap: 3rem;
+                justify-content: space-around;
+                align-items: center;
+            }
+        }
+
+        .banner-images{
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
         }
 
         .middle-content {
@@ -57,57 +79,24 @@
             }
         }
 
-        .social{
-            margin-bottom: 1rem;
-
-            a{
-                height: 2rem;
-                width: 2rem;
-            }
-            svg{
-                height: 2rem;
-                width: 2rem;
-                fill: white;
-            }
-        }
-
-        .drone-logo {
-            width: 150px;
-            filter: drop-shadow(0 0 5px hsla(0, 0%, 100%, 0.3));
-
-        img {
-            width: 100%;
-        }
-
-        }
-
         .date-img {
-            width: 150px;
-
-        img {
-            width: 100%;
-        }
-
+            max-width: 100%;
+            img{max-width: 100%;}
         }
 
         .split {
-            height: 100%;
-            width: 1px !important;
+            width: 2px !important;
             background-color: white;
+            margin: 0 1rem;
         }
 
         .text-img {
-            margin-top: 1rem;
-            max-width: 500px;
-            min-width: 100%;
-
-        img {
-            width: 100%;
-        }
-
+            max-width: 100%;
+            img{max-width: 100%;}
         }
 
         .call-to-action {
+            text-align: center;
             position: relative;
             text-decoration: none;
             color: white;
@@ -133,21 +122,42 @@
         }
 
         }
+
+        article{
+        }
+
+        footer{
+        }
+
+        .social{
+            display: flex;
+            flex-direction: row;
+            align-items: end;
+            justify-content: center;
+
+        a{
+            height: 2rem;
+            width: 2rem;
+        }
+        svg{
+            height: 2rem;
+            width: 2rem;
+            fill: black;
+        }
+        }
+
     </style>
   </head>
   <body>
     <div class="banner">
-      <div class="banner-content">
-        <div class="text-img">
-          <img src="/logo-festival-drone-ecriture.png"/>
-        </div>
-        <div class="middle-content">
-          <div class="drone-logo">
-            <img src="/logo-drone.png"/>
-          </div>
-          <div class="split"></div>
+      <div class="banner-content container">
+        <div class="banner-images">
           <div class="date-img">
             <img src="/date-30-aout.png"/>
+          </div>
+          <div class="split"></div>
+          <div class="text-img">
+            <img src="/logo-festival-drone-ecriture.png"/>
           </div>
         </div>
         <a class="call-to-action"
@@ -157,12 +167,16 @@
             <path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"/>
           </svg>
         </a>
-        <div class="social">
-          <a href="https://www.facebook.com/groups/963252338468683" target="_blank">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>facebook</title><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" /></svg>
-          </a>
-        </div>
       </div>
     </div>
+    <article class="container">
+    </article>
+    <footer class="container">
+      <div class="social">
+        <a href="https://www.facebook.com/groups/963252338468683" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>facebook</title><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" /></svg>
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
