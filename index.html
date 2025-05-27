@@ -11,7 +11,10 @@
             padding: 0;
             box-sizing: border-box;
             --dfq-red: hsl(359, 62%, 39%);
-            --dfq-pale-red: hsl(10, 72%, 49%);
+            --dfq-red-l1: hsl(10, 72%, 49%);
+            --dfq-red-l3: hsl(3, 82%, 63%);
+            --dfq-red-l4: hsl(0, 90%, 94%);
+            --dfq-red-l5: hsl(0, 90%, 98%);
         }
 
         body {
@@ -50,7 +53,7 @@
         .logo {
             font-size: 2rem;
             font-weight: bold;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: var(--dfq-red);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -71,7 +74,7 @@
         }
 
         .nav-links a:hover {
-            color: #667eea;
+            color: var(--dfq-red);
             transform: translateY(-2px);
         }
 
@@ -85,6 +88,7 @@
             background: url("/Festival_Drone_header.jpg");
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
         }
 
         @keyframes float {
@@ -139,12 +143,6 @@
             padding: 2rem;
             border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .detail-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
         .detail-card i {
@@ -178,7 +176,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a52);
+            background: linear-gradient(45deg, var(--dfq-red-l1), var(--dfq-red-l3));
             color: white;
             box-shadow: 0 8px 25px rgba(255, 107, 107, 0.3);
         }
@@ -222,7 +220,7 @@
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 3rem;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: var(--dfq-red);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -236,34 +234,17 @@
         }
 
         .program-card {
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8f0ff 100%);
+            background: var(--dfq-red-l5);
             padding: 2rem;
             border-radius: 20px;
-            border-left: 5px solid #667eea;
+            border-left: 5px solid var(--dfq-red-l3);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .program-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100px;
-            height: 100px;
-            background: linear-gradient(45deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
-            border-radius: 50%;
-            transform: translate(30px, -30px);
-        }
-
-        .program-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.2);
-        }
-
         .program-card h3 {
-            color: #667eea;
+            color: var(--dfq-red-l1);
             margin-bottom: 1rem;
             position: relative;
             z-index: 2;
@@ -277,7 +258,7 @@
         }
 
         .drone-model {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: var(--dfq-red-l3);
             color: white;
             padding: 1rem;
             border-radius: 15px;
@@ -298,15 +279,15 @@
         }
 
         .audience-item {
-            background: #f8f9ff;
+            background: var(--dfq-red-l5);
             padding: 1.5rem;
             border-radius: 15px;
-            border-left: 4px solid #667eea;
+            border-left: 4px solid var(--dfq-red-l3);
             transition: all 0.3s ease;
         }
 
         .audience-item:hover {
-            background: #e8f0ff;
+            background: var(--dfq-red-l4);
             transform: translateX(10px);
         }
 
@@ -330,7 +311,7 @@
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-top: 4px solid #667eea;
+            border-top: 4px solid var(--dfq-red-l3);
         }
 
         .notes-section {
@@ -363,7 +344,7 @@
         }
 
         .contact-section {
-            background: linear-gradient(135deg, #667eea, #764ba2);
+            background: var(--dfq-red);
             color: white;
             text-align: center;
             padding: 4rem 2rem;
@@ -438,14 +419,14 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            color: #667eea;
+            color: var(--dfq-red-l1);
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
         }
 
         .video-link:hover {
-            color: #764ba2;
+            color: var(--dfq-red);
             transform: translateX(5px);
         }
     </style>
@@ -499,11 +480,11 @@
           </div>
 
           <div class="cta-buttons">
-            <a href="#" class="btn btn-primary pulse">
+            <a href="https://app.hi.events/event/839/festival-drone-fan-quebec" class="btn btn-primary">
               <i class="fas fa-shopping-cart"></i>
               Acheter des billets
             </a>
-            <a href="#" class="btn btn-secondary">
+            <a href="/Stationnements%20PDF.pdf" target="_blank" class="btn btn-secondary">
               <i class="fas fa-map"></i>
               Carte des stationnements (PDF)
             </a>
@@ -529,11 +510,6 @@
             <div class="program-card">
               <h3><i class="fas fa-gamepad"></i> Essais de drones FPV</h3>
               <p>Possibilité d'essayer de petits drones FPV sur place</p>
-              <div
-                style="margin-top: 1rem; padding: 1rem; background: rgba(102, 126, 234, 0.1); border-radius: 10px; text-align: center;">
-                <i class="fas fa-helicopter" style="font-size: 3rem; color: #667eea;"></i>
-                <p><em>Petits drones sur place</em></p>
-              </div>
             </div>
 
             <div class="program-card">
@@ -558,7 +534,8 @@
           </div>
 
           <div style="margin-top: 3rem;">
-            <h3 style="text-align: center; margin-bottom: 2rem; color: #667eea;">Modèles de drones en démonstration</h3>
+            <h3
+              style="text-align: center; margin-bottom: 2rem; color: var(--dfq-red);">Modèles de drones en démonstration</h3>
             <div class="drone-models">
               <div class="drone-model">DJI Mini Pro 4</div>
               <div class="drone-model">Autel EVO II Pro</div>
@@ -633,7 +610,7 @@
             <h3><i class="fas fa-map"></i> Localisation</h3>
             <p>Derrière le CÉGEP Beauce Appalaches<br>1055 116e Rue, Saint-Georges</p>
             <div style="margin: 2rem 0; padding: 2rem; background: white; border-radius: 15px;">
-              <i class="fas fa-map-marked-alt" style="font-size: 4rem; color: #667eea;"></i>
+              <i class="fas fa-map-marked-alt" style="font-size: 4rem; color: var(--dfq-red-l1)"></i>
               <p><em>Carte interactive disponible sur le site</em></p>
             </div>
           </div>
@@ -677,7 +654,7 @@
         </section>
 
         <section class="section" style="text-align: center; padding: 2rem 0;">
-          <h3 style="color: #667eea; margin-bottom: 1rem;">Commanditaires</h3>
+          <h3 style="color: var(--dfq-red); margin-bottom: 1rem;">Commanditaires</h3>
           <p
             style="color: #666666; font-style: italic;">Les logos des partenaires seront affichés ici dès que nous aurons au moins 3 commanditaires confirmés.</p>
         </section>
