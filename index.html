@@ -342,11 +342,17 @@
         }
 
         .peek-item .video-container {
+            height: 315px;
             display: inline-block;
             border-radius: 15px;
             border: 6px solid var(--dfq-red-l3);
             overflow: hidden;
             box-sizing: content-box;
+        }
+
+        .video-container .video-iframe {
+            width: 560px;
+            height: 315px;
         }
 
         .audience-list {
@@ -462,7 +468,7 @@
                 font-size: 1.2rem;
             }
 
-            .nav-links {
+            .nav-links li:not(:last-child) {
                 display: none;
             }
 
@@ -473,6 +479,15 @@
 
             .section-title {
                 font-size: 2rem;
+            }
+
+            .video-container .video-iframe {
+                width: 336px;
+                height: 189px;
+            }
+
+            .peek-item .video-container {
+                height: 189px;
             }
         }
 
@@ -728,8 +743,8 @@
             <div class="peek-items">
               <div class="peek-item">
                 <h3 class="subsection-title">Notre festival</h3>
-                <div class="video-container" style="height: 315px">
-                  <iframe width="560" height="315"
+                <div class="video-container">
+                  <iframe class="video-iframe"
                           src="https://www.youtube-nocookie.com/embed/rpnWPI9SK_M?si=GjltU2GdcyCDZj83"
                           title="YouTube video player" frameborder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -739,8 +754,8 @@
 
               <div class="peek-item">
                 <h3 class="subsection-title" id="fpv-race">Les courses FPV</h3>
-                <div class="video-container" style="height: 315px">
-                  <iframe width="560" height="315"
+                <div class="video-container">
+                  <iframe class="video-iframe"
                           src="https://www.youtube-nocookie.com/embed/WiyzA_hJANQ?si=qa27IxmQ39Maluqu"
                           title="YouTube video player" frameborder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
