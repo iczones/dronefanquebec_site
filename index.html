@@ -329,6 +329,45 @@
             color: var(--dfq-red-l3);
         }
 
+        .conference-animator {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+            padding: 1rem;
+            border-radius: 10px;
+            border-top: 6px solid var(--dfq-red-l3);
+            border-bottom: 6px solid var(--dfq-red-l3);
+            background-color: var(--dfq-red-l5);
+        }
+
+        .animator-img {
+            display: inline-block;
+            width: min(200px, 100%);
+            overflow: hidden;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            background-image: url("/hugues_drouin.png");
+            background-size: 400px;
+            background-position: center;
+            background-repeat: no-repeat;
+            box-shadow: inset 0 0 2px var(--dfq-red-l1);
+        }
+
+        .animator-name {
+            vertical-align: middle;
+            display: inline-block;
+            text-align: left;
+            font-size: 1.5rem;
+            color: var(--dfq-red);
+        }
+
+        .animator-name div:nth-child(2) {
+            font-weight: bold;
+        }
+
         .peek-items {
             display: flex;
             flex-direction: row;
@@ -445,6 +484,32 @@
 
         .contact-section a:hover {
             text-decoration: underline;
+        }
+
+        ul.sponsor-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            gap: 2rem;
+        }
+
+        li.sponsor {
+            padding: 0;
+            margin: 0;
+        }
+
+        li.sponsor img {
+            max-width: 200px;
+            max-height: 100px;
+        }
+
+        li.sponsor.rounded img {
+            border-radius: 10px;
+            overflow: hidden;
         }
 
         /* Footer */
@@ -568,7 +633,7 @@
             <div class="detail-card">
               <i class="fas fa-ticket-alt"></i>
               <h3>Billets</h3>
-              <p>Prévente: 12.50$<br>À la porte: 16.50$<br><small>Enfants -12 ans: Gratuit*</small></p>
+              <p>16.50$<br><small>Enfants - de 12 ans: Gratuit*</small></p>
             </div>
             <div class="detail-card">
               <i class="fas fa-car"></i>
@@ -584,7 +649,12 @@
             </a>
             <a href="/Stationnements%20PDF.pdf" target="_blank" class="btn btn-secondary">
               <i class="fas fa-map"></i>
-              Carte des stationnements (PDF)
+              Stationnements (PDF)
+            </a>
+            <a href="/Horaire%20de%20la%20journée%20Festival%20Drone%20Fan%20Québec.pdf" target="_blank"
+               class="btn btn-secondary">
+              <i class="fas fa-clock"></i>
+              Horaire (PDF)
             </a>
           </div>
         </div>
@@ -706,16 +776,7 @@
               </div>
 
               <div class="conference">
-                <h4>3. Filmer comme un pro</h4>
-                <ul class="conference-points">
-                  <li>Les bases</li>
-                  <li>Trucs et précaution à prendre pour des images professionnelles</li>
-                </ul>
-                <i class="fas fa-video"></i>
-              </div>
-
-              <div class="conference">
-                <h4>4. Utilisation professionnelle des drones</h4>
+                <h4>3. Utilisation professionnelle des drones</h4>
                 <ul class="conference-points">
                   <li>Environnement</li>
                   <li>Recherche et sauvetage</li>
@@ -723,18 +784,34 @@
                   <li>Cinéma</li>
                   <li>Agriculture</li>
                   <li>Infrastructures/inspection (bâtiments, tours, barrage, autre)</li>
-                  <li>Partir son entreprise</li>
                 </ul>
                 <i class="fas fa-handshake-simple"></i>
               </div>
 
               <div class="conference">
-                <h4>5. Emploi - Pilote de drones professionnel</h4>
+                <h4>4. Emploi - Pilote de drones professionnel</h4>
                 <ul class="conference-points">
                   <li>Les bases requises</li>
                   <li>Partir son entreprise</li>
                 </ul>
                 <i class="fas fa-money-bill"></i>
+              </div>
+
+              <div class="conference">
+                <h4>5. Filmer comme un pro</h4>
+                <ul class="conference-points">
+                  <li>Les bases</li>
+                  <li>Trucs et précaution à prendre pour des images professionnelles</li>
+                </ul>
+                <i class="fas fa-video"></i>
+              </div>
+            </div>
+
+            <div class="conference-animator">
+              <div class="animator-img"></div>
+              <div class="animator-name">
+                <div>Animateur de la journée</div>
+                <div>Monsieur Hugues Drouin</div>
               </div>
             </div>
           </div>
@@ -862,9 +939,35 @@
           </div>
         </section>
 
-        <section class="section" style="display:none!important; text-align: center; padding: 2rem 0;">
+        <section class="section" style="text-align: center; padding: 2rem 0;">
           <h3 style="color: var(--dfq-red); margin-bottom: 1rem;">Commanditaires</h3>
-          <p style="color: #666666; font-style: italic;"></p>
+
+          <ul class="sponsor-grid">
+            <li class="sponsor">
+              <img src="/sponsor/saint_georges.jpg" alt="Ville de Saint-Georges">
+            </li>
+            <li class="sponsor">
+              <img src="/sponsor/ko_multimedia.png" alt="KO Multimédia">
+            </li>
+            <li class="sponsor">
+              <img src="/sponsor/ultima.png" alt="Ultima">
+            </li>
+            <li class="sponsor">
+              <img src="/sponsor/cauca.jpg" alt="CAUCA">
+            </li>
+            <li class="sponsor">
+              <img src="/sponsor/mrc_beauce_sartigan.png" alt="MRC Beauce Sartigan">
+            </li>
+            <li class="sponsor">
+              <img src="/sponsor/chez_gerard.png" alt="Chez Gerard">
+            </li>
+            <li class="sponsor">
+              <img src="/sponsor/boccam.png" alt="Boccam">
+            </li>
+            <li class="sponsor rounded">
+              <img src="/sponsor/bourque_electrique.png" alt="Bourque Électrique">
+            </li>
+          </ul>
         </section>
       </div>
     </div>
